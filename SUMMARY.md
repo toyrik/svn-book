@@ -8,408 +8,277 @@
   * [Структура книги](preface-organisation.md)
   * [Эта книга распространяется свободно](preface-free.md)
   * [Благодарности](preface-acks.md)
-  * [Что такое Subversion?](intro-whatis.md)
-* [1. Фундаментальные понятия]()
-  * [Хранилище]()
-  * [Модели версионирования]()
-    * [Проблема разделения файлов]()
-    * [Модель Блокирование-Изменение-Разблокирование]()
-    * [Модель Копирование-Изменение-Слияние]()
-  * [Subversion в действии]()
-    * [URL хранилища в Subversion]()
-    * [Рабочие копии]()
-    * [Правки]()
-    * [Как рабочие копии отслеживают хранилище]()
-    * [Смешивание правок в рабочих копиях]()
-    * [Обновления и фиксации отделены друг от друга]()
-      * [Смешивание правок — это нормально]()
-      * [Смешивание правок — это полезно]()
-      * [Смешивание правок имеет ограничения]()
-  * [Подводя итоги* Экскурсия по Subversion]()
-  * [Читайте справку!]()
-  * [Импорт]()
-  * [Путешествие во времени вместе с Subversion]()
-  * [Создание рабочей копии]()
-  * [Простейший рабочий цикл]()
-    * [Обновление рабочей копии]()
-    * [Внесение изменений в рабочую копию]()
-    * [Анализ изменений]()
-      * [svn status]()
-      * [svn diff]()
-      * [svn revert]()
-    * [Разрешение конфликтов (при слиянии с чужими зменениями)]()
-      * [Слияние конфликтов вручную]()
-      * [Копирование файла поверх вашего рабочего файла]()
-      * [Использование svn revert]()
-    * [Фиксация изменений]()
-  * [Анализ истории]()
-    * [svn log]()
-    * [svn diff]()
-      * [Анализ локальных изменений]()
-      * [Сравнение рабочей копии с хранилищем]()
-      * [Сравнение хранилища с хранилищем]()
-    * [svn cat]()
-    * [svn list]()
-    * [Заключительное слово об истории]()
-    Другие полезные команды
-        svn cleanup
-        svn import
-    Подводя итоги
-Профессиональное использование Subversion
-    Способы обозначения правок
-        Ключевые слова правок
-        Даты правок
-    Свойства
-        Зачем нужны свойства?
-        Использование свойств
-        Свойства и рабочий цикл Subversion
-        Автоматическая установка свойств
-    Переносимость файлов
-        Тип содержимого файла
-        Исполнимость файла
-        Символы конца строки
-    Пропуск неверсионированных элементов
-    Подстановка ключевых слов
-    Locking
-        Creating locks
-        Discovering locks
-        Breaking and stealing locks
-        Lock Communication
-    Внешние зависимости
-    Стержневые и оперативные правки
-Ветвление и слияние
-    Что такое ветка?
-    Использование веток
-        Создание ветки
-        Работа с веткой
-        Ключевые идеи, стоящие за ветками
-    Копирование изменений между ветками
-        Копирование отдельных изменений
-        Ключевые идеи, стоящие за слиянием
-        Как правильнее всего использовать слияние
-            Ручной контроль слияния
-            Предварительный просмотр результатов слияния
-            Конфликты при слиянии
-            Учитывать или игнорировать происхождение
-    Типовые примеры
-        Полное объединение двух веток
-        Отмена изменений
-        Восстановление удаленных элементов
-        Типовые приемы использования веток
-            Ветки релизов
-            Функциональные ветки
-    Переключение рабочей копии
-    Метки
-        Создание простой метки
-        Создание комплексной метки
-    Поддержка веток
-        Структура хранилища
-        Продолжительность жизни информации
-    Vendor branches
-        General Vendor Branch Management Procedure
-        svn_load_dirs.pl
-    Подводя итоги
-Администрирование хранилища
-    Repository Basics
-        Understanding Transactions and Revisions
-        Unversioned Properties
-        Repository Data Stores
-            Berkeley DB
-            FSFS
-    Repository Creation and Configuration
-        Hook Scripts
-        Berkeley DB Configuration
-    Repository Maintenance
-        An Administrator's Toolkit
-            svnlook
-            svnadmin
-            svndumpfilter
-            Berkeley DB Utilities
-        Repository Cleanup
-        Managing Disk Space
-        Repository Recovery
-        Migrating a Repository
-        Repository Backup
-    Adding Projects
-        Choosing a Repository Layout
-        Creating the Layout, and Importing Initial Data
-    Summary
-Настройка сервера
-    Обзор
-        Http-сервер Apache
-        Сервер svnserve
-        svnserve через SSH
-        Выбор лучшей конфигурации сервера
-    Сетевая модель
-        Запросы и отклики
-        Кэширование клиентской идентификационной информации
-    Собственный сервер svnserve
-        Запуск Сервера
-        Встроенная аутентификация и авторизация
-            Создание файла пользователей и область хранилища
-            Установка контроля доступа
-        SSH идентификация и авторизация
-        Трюки конфигурирования SSH
-            Начальная настройка
-            Controlling the invoked command
-    httpd, the Apache HTTP server
-        Prerequisites
-        Basic Apache Configuration
-        Authentication Options
-            Basic HTTP Authentication
-            SSL Certificate Management
-        Authorization Options
-
-            Blanket Access Control
-            Per-Directory Access Control
-            Disabling Path-based Checks
-
-        Extra Goodies
-
-            Repository Browsing
-            Other Features
-
-    Path-Based Authorization
-    Supporting Multiple Repository Access Methods
-
-Профессиональная настройка Subversion
-
-    Параметры времени выполнения
-
-        Структура области конфигурации
-        Конфигурация и реестр Windows
-        Параметры конфигурации
-
-            Servers
-            Config
-
-    Localization
-
-        Understanding locales
-        Subversion's use of locales
-
-    Using External Differencing Tools
-
-        External diff
-        External diff3
-
-Информация для разработчиков
-
-    Layered Library Design
-
-        Repository Layer
-        Repository Access Layer
-
-            RA-DAV (Repository Access Using HTTP/DAV)
-            RA-SVN (Custom Protocol Repository Access)
-            RA-Local (Direct Repository Access)
-            Your RA Library Here
-
-        Client Layer
-
-    Using the APIs
-
-        The Apache Portable Runtime Library
-        URL and Path Requirements
-        Using Languages Other than C and C++
-
-    Inside the Working Copy Administration Area
-
-        The Entries File
-        Pristine Copies and Property Files
-
-    WebDAV
-
-9. Полное справочное руководство по Subversion
-
-    Клиент командной строки Subversion: svn
-
-        Параметры командной строкиsvn
-        Подкоманды svn
-
-            svn add
-            svn blame
-            svn cat
-            svn checkout
-            svn cleanup
-            svn commit
-            svn copy
-            svn delete
-            svn diff
-            svn export
-            svn help
-            svn import
-            svn info
-            svn list
-            svn lock
-            svn log
-            svn merge
-            svn mkdir
-            svn move
-            svn propdel
-            svn propedit
-            svn propget
-            svn proplist
-            svn propset
-            svn resolved
-            svn revert
-            svn status
-            svn switch
-            svn unlock
-            svn update
-
-    svnadmin
-
-        svnadmin Switches
-        svnadmin Subcommands
-
-            svnadmin create
-            svnadmin deltify
-            svnadmin dump
-            svnadmin help
-            svnadmin hotcopy
-            svnadmin list-dblogs
-            svnadmin list-unused-dblogs
-            svnadmin load
-            svnadmin lslocks
-            svnadmin lstxns
-            svnadmin recover
-            svnadmin rmlocks
-            svnadmin rmtxns
-            svnadmin setlog
-            svnadmin verify
-
-    svnlook
-
-        svnlook Switches
-        svnlook
-
-            svnlook author
-            svnlook cat
-            svnlook changed
-            svnlook date
-            svnlook diff
-            svnlook dirs-changed
-            svnlook help
-            svnlook history
-            svnlook info
-            svnlook lock
-            svnlook log
-            svnlook propget
-            svnlook proplist
-            svnlook tree
-            svnlook uuid
-            svnlook youngest
-
-    svnserve
-
-        svnserve Switches
-
-    svnversion
-
-        svnversion
-
-    mod_dav_svn
-
-        mod_dav_svn Configuration Directives
-
-    Свойства Subversion
-
-        Свойства Subversion
-
-A. Быстрый старт в Subversion
-
-    Установка Subversion
-    Быстрый старт в Subversion
-
-B. Subversion для пользователей CVS
-
-    Revision Numbers Are Different Now
-    Directory Versions
-    More Disconnected Operations
-    Distinction Between Status and Update
-
-        Status
-        Update
-
-    Branches and Tags
-    Metadata Properties
-    Conflict Resolution
-    Binary Files and Translation
-    Versioned Modules
-    Authentication
-    Converting a Repository from CVS to Subversion
-
-C. WebDAV и автоматическое управление версиями
-
-    Basic WebDAV Concepts
-
-        Original WebDAV
-        DeltaV Extensions
-
-    Subversion and DeltaV
-    Autoversioning
-    Client Interoperability
-
-        Standalone WebDAV applications
-
-            Microsoft Office, Dreamweaver, Photoshop
-            Cadaver, DAV Explorer
-
-        File-explorer WebDAV extensions
-
-            Microsoft Web Folders
-            Nautilus, Konqueror
-
-        WebDAV filesystem implementation
-
-            WebDrive, NetDrive
-            Mac OS X
-            Linux davfs2
-
-D. Инструменты от сторонних разработчиков
-E. Copyright
-Предметный указатель
-Русский глоссарий
-
-Список иллюстраций
-
-1. Архитектура Subversion
-1.1. Типичная клиент/серверная система
-1.2. Проблема потери изменений
-1.3. Модель блокирование-изменение-разблокирование
-1.4. Модель копирование-изменение-слияние
-1.5. Модель копирование-изменение-слияние (продолжение)
-1.6. Файловая система хранилища
-1.7. Хранилище
-4.1. Ветки разработки
-4.2. Начальная структура хранилища
-4.3. Хранилище, содержащее новую копию
-4.4. История ветвления для одного файла
-8.1. Files and directories in two dimensions
-8.2. Versioning time—the third dimension!
-
-Список таблиц
-
-1.1. URL для доступа к хранилищу.
-5.1. Repository Data Store Comparison
-6.1. Сравнение серверов
-8.1. A Brief Inventory of the Subversion Libraries
-C.1. Common WebDAV Clients
-
-Список примеров
-
-5.1. txn-info.sh (Reporting Outstanding Transactions)
-6.1. A sample configuration for anonymous access.
-6.2. A sample configuration for authenticated access.
-6.3. A sample configuration for mixed authenticated/anonymous access.
-6.4. Disabling path checks altogether
-7.1. Пример указания параметров в (.reg) файле реестра.
-7.2. diffwrap.sh
-7.3. diffwrap.bat
-7.4. diff3wrap.sh
-7.5. diff3wrap.bat
-8.1. Using the Repository Layer
-8.2. Using the Repository Layer with Python
-8.3. A Python Status Crawler
-8.4. Contents of a Typical .svn/entries File
+  * [Что такое Subversion?](preface-intro-whatis.md)
+* [I. Фундаментальные понятия](basic.md)
+  * [Хранилище](basic-repository.md)
+  * [Модели версионирования](basic-vsn-models.md)
+  * [Subversion в действии](basic-in-action.md)
+  * [Подводя итоги](basic-summary.md)
+* [II. Экскурсия по Subversion](tour.md)
+  * [Читайте справку!](tour-help.md)
+  * [Импорт](tour-import.md)
+  * [Путешествие во времени вместе с Subversion](tour-revs.md)
+  * [Создание рабочей копии](tour-initial.md)
+  * [Простейший рабочий цикл](tour-cycle.md)
+  * [Анализ истории](tour-history.md)
+  * [Другие полезные команды](tour-other.md)
+  * [Подводя итоги](//todo)
+* [Профессиональное использование Subversion](//todo)
+  * [Способы обозначения правок](//todo)
+    * [Ключевые слова правок](//todo)
+    * [Даты правок](//todo)
+  * [Свойства](//todo)
+    * [Зачем нужны свойства?](//todo)
+    * [Использование свойств](//todo)
+    * [Свойства и рабочий цикл Subversion](//todo)
+    * [Автоматическая установка свойств](//todo)
+  * [Переносимость файлов](//todo)
+    * [Тип содержимого файла](//todo)
+    * [Исполнимость файла](//todo)
+    * [Символы конца строки](//todo)
+  * [Пропуск неверсионированных элементов](//todo)
+  * [Подстановка ключевых слов](//todo)
+  * [Locking](//todo)
+    * [Creating locks](//todo)
+    * [Discovering locks](//todo)
+    * [Breaking and stealing locks](//todo)
+    * [Lock Communication](//todo)
+  * [Внешние зависимости](//todo)
+  * [Стержневые и оперативные правки](//todo)
+* [Ветвление и слияние](//todo)
+  * [Что такое ветка?](//todo)
+  * [Использование веток](//todo)
+    * [Создание ветки](//todo)
+    * [Работа с веткой](//todo)
+    * [Ключевые идеи, стоящие за ветками](//todo)
+  * [Копирование изменений между ветками](//todo)
+    * [Копирование отдельных изменений](//todo)
+    * [Ключевые идеи, стоящие за слиянием](//todo)
+    * [Как правильнее всего использовать слияние](//todo)
+      * [Ручной контроль слияния](//todo)
+      * [Предварительный просмотр результатов слияния](//todo)
+      * [Конфликты при слиянии](//todo)
+      * [Учитывать или игнорировать происхождение](//todo)
+  * [Типовые примеры](//todo)
+    * [Полное объединение двух веток](//todo)
+    * [Отмена изменений](//todo)
+    * [Восстановление удаленных элементов](//todo)
+    * [Типовые приемы использования веток](//todo)
+      * [Ветки релизов](//todo)
+      * [Функциональные ветки](//todo)
+  * [Переключение рабочей копии](//todo)
+  * [Метки](//todo)
+    * [Создание простой метки](//todo)
+    * [Создание комплексной метки](//todo)
+  * [Поддержка веток](//todo)
+    * [Структура хранилища](//todo)
+    * [Продолжительность жизни информации](//todo)
+  * [Vendor branches](//todo)
+    * [General Vendor Branch Management Procedure](//todo)
+    * [svn_load_dirs.pl](//todo)
+  * [Подводя итоги](//todo)
+* [Администрирование хранилища](//todo)
+  * [Repository Basics](//todo)
+    * [Understanding Transactions and Revisions](//todo)
+    * [Unversioned Properties](//todo)
+    * [Repository Data Stores](//todo)
+      * [Berkeley DB](//todo)
+      * [FSFS](//todo)
+  * [Repository Creation and Configuration](//todo)
+    * [Hook Scripts](//todo)
+    * [Berkeley DB Configuration](//todo)
+  * [Repository Maintenance](//todo)
+    * [An Administrator's Toolkit](//todo)
+      * [svnlook](//todo)
+      * [svnadmin](//todo)
+      * [svndumpfilter](//todo)
+      * [Berkeley DB Utilities](//todo)
+    * [Repository Cleanup](//todo)
+    * [Managing Disk Space](//todo)
+    * [Repository Recovery](//todo)
+    * [Migrating a Repository](//todo)
+    * [Repository Backup](//todo)
+  * [Adding Projects](//todo)
+    * [Choosing a Repository Layout](//todo)
+    * [Creating the Layout, and Importing Initial Data](//todo)
+  * [Summary](//todo)
+* [Настройка сервера](//todo)
+  * [Обзор](//todo)
+    * [Http-сервер Apache](//todo)
+    * [Сервер svnserve](//todo)
+    * [svnserve через SSH](//todo)
+    * [Выбор лучшей конфигурации сервера](//todo)
+  * [Сетевая модель](//todo)
+    * [Запросы и отклики](//todo)
+    * [Кэширование клиентской идентификационной информации](//todo)
+  * [Собственный сервер svnserve](//todo)
+    * [Запуск Сервера](//todo)
+    * [Встроенная аутентификация и авторизация](//todo)
+      * [Создание файла пользователей и область хранилища](//todo)
+      * [Установка контроля доступа](//todo)
+    * [SSH идентификация и авторизация](//todo)
+    * [Трюки конфигурирования SSH](//todo)
+      * [Начальная настройка](//todo)
+      * [Controlling the invoked command](//todo)
+  * [httpd, the Apache HTTP server](//todo)
+    * [Prerequisites](//todo)
+    * [Basic Apache Configuration](//todo)
+    * [Authentication Options](//todo)
+      * [Basic HTTP Authentication](//todo)
+      * [SSL Certificate Management](//todo)
+  * [Authorization Options](//todo)
+    * [Blanket Access Control](//todo)
+    * [Per-Directory Access Control](//todo)
+    * [Disabling Path-based Checks](//todo)
+  * [Extra Goodies](//todo)
+    * [Repository Browsing](//todo)
+    * [Other Features](//todo)
+  * [Path-Based Authorization](//todo)
+  * [Supporting Multiple Repository Access Methods](//todo)
+* [Профессиональная настройка Subversion](//todo)
+  * [Параметры времени выполнения](//todo)
+    * [Структура области конфигурации](//todo)
+    * [Конфигурация и реестр Windows](//todo)
+    * [Параметры конфигурации](//todo)
+      * [Servers](//todo)
+      * [Config](//todo)
+  * [Localization](//todo)
+    * [Understanding locales](//todo)
+    * [Subversion's use of locales](//todo)
+  * [Using External Differencing Tools](//todo)
+    * [External diff](//todo)
+    * [External diff3](//todo)
+* [Информация для разработчиков](//todo)
+  * [Layered Library Design](//todo)
+    * [Repository Layer](//todo)
+    * [Repository Access Layer](//todo)
+      * [RA-DAV (Repository Access Using HTTP/DAV)](//todo)
+      * [RA-SVN (Custom Protocol Repository Access)](//todo)
+      * [RA-Local (Direct Repository Access)](//todo)
+      * [Your RA Library Here](//todo)
+    * [Client Layer](//todo)
+  * [Using the APIs](//todo)
+    * [The Apache Portable Runtime Library](//todo)
+    * [URL and Path Requirements](//todo)
+    * [Using Languages Other than C and C++](//todo)
+  * [Inside the Working Copy Administration Area](//todo)
+    * [The Entries File](//todo)
+    * [Pristine Copies and Property Files](//todo)
+  * [WebDAV](//todo)
+* [9. Полное справочное руководство по Subversion](//todo)
+  * [Клиент командной строки Subversion: svn](//todo)
+    * [Параметры командной строкиsvn](//todo)
+    * [Подкоманды svn](//todo)
+      * [svn add](//todo)
+      * [svn blame](//todo)
+      * [svn cat](//todo)
+      * [svn checkout](//todo)
+      * [svn cleanup](//todo)
+      * [svn commit](//todo)
+      * [svn copy](//todo)
+      * [svn delete](//todo)
+      * [svn diff](//todo)
+      * [svn export](//todo)
+      * [svn help](//todo)
+      * [svn import](//todo)
+      * [svn info](//todo)
+      * [svn list](//todo)
+      * [svn lock](//todo)
+      * [svn log](//todo)
+      * [svn merge](//todo)
+      * [svn mkdir](//todo)
+      * [svn move](//todo)
+      * [svn propdel](//todo)
+      * [svn propedit](//todo)
+      * [svn propget](//todo)
+      * [svn proplist](//todo)
+      * [svn propset](//todo)
+      * [svn resolved](//todo)
+      * [svn revert](//todo)
+      * [svn status](//todo)
+      * [svn switch](//todo)
+      * [svn unlock](//todo)
+      * [svn update](//todo)
+  * [svnadmin](//todo)
+    * [svnadmin Switches](//todo)
+    * [svnadmin Subcommands](//todo)
+      * [svnadmin create](//todo)
+      * [svnadmin deltify](//todo)
+      * [svnadmin dump](//todo)
+      * [svnadmin help](//todo)
+      * [svnadmin hotcopy](//todo)
+      * [svnadmin list-dblogs](//todo)
+      * [svnadmin list-unused-dblogs](//todo)
+      * [svnadmin load](//todo)
+      * [svnadmin lslocks](//todo)
+      * [svnadmin lstxns](//todo)
+      * [svnadmin recover](//todo)
+      * [svnadmin rmlocks](//todo)
+      * [svnadmin rmtxns](//todo)
+      * [svnadmin setlog](//todo)
+      * [svnadmin verify](//todo)
+  * [svnlook](//todo)
+    * [svnlook Switches](//todo)
+    * [svnlook](//todo)
+      * [svnlook author](//todo)
+      * [svnlook cat](//todo)
+      * [svnlook changed](//todo)
+      * [svnlook date](//todo)
+      * [svnlook diff](//todo)
+      * [svnlook dirs-changed](//todo)
+      * [svnlook help](//todo)
+      * [svnlook history](//todo)
+      * [svnlook info](//todo)
+      * [svnlook lock](//todo)
+      * [svnlook log](//todo)
+      * [svnlook propget](//todo)
+      * [svnlook proplist](//todo)
+      * [svnlook tree](//todo)
+      * [svnlook uuid](//todo)
+      * [svnlook youngest](//todo)
+  * [svnserve](//todo)
+    * [svnserve Switches](//todo)
+  * [svnversion](//todo)
+    * [svnversion](//todo)
+  * [mod_dav_svn](//todo)
+    * [mod_dav_svn Configuration Directives](//todo)
+  * [Свойства Subversion](//todo)
+    * [Свойства Subversion](//todo)
+* [A. Быстрый старт в Subversion](//todo)
+  * [Установка Subversion](//todo)
+  * [Быстрый старт в Subversion](//todo)
+* [B. Subversion для пользователей CVS](//todo)
+  * [Revision Numbers Are Different Now](//todo)
+  * [Directory Versions](//todo)
+  * [More Disconnected Operations](//todo)
+  * [Distinction Between Status and Update](//todo)
+    * [Status](//todo)
+    * [Update](//todo)
+  * [Branches and Tags](//todo)
+  * [Metadata Properties](//todo)
+  * [Conflict Resolution](//todo)
+  * [Binary Files and Translation](//todo)
+  * [Versioned Modules](//todo)
+  * [Authentication](//todo)
+  * [Converting a Repository from CVS to Subversion](//todo)
+* [C. WebDAV и автоматическое управление версиями](//todo)
+  * [Basic WebDAV Concepts](//todo)
+    * [Original WebDAV](//todo)
+    * [DeltaV Extensions](//todo)
+  * [Subversion and DeltaV](//todo)
+  * [Autoversioning](//todo)
+  * [Client Interoperability](//todo)
+    * [Standalone WebDAV applications](//todo)
+      * [Microsoft Office, Dreamweaver, Photoshop](//todo)
+      * [Cadaver, DAV Explorer](//todo)
+    * [File-explorer WebDAV extensions](//todo)
+      * [Microsoft Web Folders](//todo)
+      * [Nautilus, Konqueror](//todo)
+    * [WebDAV filesystem implementation](//todo)
+      * [WebDrive, NetDrive](//todo)
+      * [Mac OS X](//todo)
+      * [Linux davfs2](//todo)
+* [D. Инструменты от сторонних разработчиков](//todo)
+* [E. Copyright](//todo)
+* [Предметный указатель](//todo)
+* [Русский глоссарий](//todo)
