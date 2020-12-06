@@ -1,42 +1,55 @@
 # Summary
 
 * [Предисловие](foreword.md)
-* [Об этой книге](preface.md)
-  * [Для кого написана эта книга?](preface-audience.md)
-  * [Как читать эту книгу?](preface-howread.md)
-  * [Соглашения, принятые в книге](preface-conventions.md)
-  * [Структура книги](preface-organisation.md)
-  * [Эта книга распространяется свободно](preface-free.md)
-  * [Благодарности](preface-acks.md)
-  * [Что такое Subversion?](preface-intro-whatis.md)
-* [I. Фундаментальные понятия](basic.md)
-  * [Хранилище](basic-repository.md)
-  * [Модели версионирования](basic-vsn-models.md)
-  * [Subversion в действии](basic-in-action.md)
-  * [Подводя итоги](basic-summary.md)
-* [II. Экскурсия по Subversion](tour.md)
-  * [Читайте справку!](tour-help.md)
-  * [Импорт](tour-import.md)
-  * [Путешествие во времени вместе с Subversion](tour-revs.md)
-  * [Создание рабочей копии](tour-initial.md)
-  * [Простейший рабочий цикл](tour-cycle.md)
-  * [Анализ истории](tour-history.md)
-  * [Другие полезные команды](tour-other.md)
-  * [Подводя итоги](tour-summary.md)
-* [III. Профессиональное использование Subversion](advanced.md)
-  * [Способы обозначения правок](advanced-revs-specifiers.md)
-  * [Свойства](advanced-props.md)
-  * [Переносимость файлов](advanced-props-file-portability.md)
-  * [Пропуск неверсионированных элементов](//todo)
-  * [Подстановка ключевых слов](//todo)
-  * [Locking](//todo)
-    * [Creating locks](//todo)
-    * [Discovering locks](//todo)
-    * [Breaking and stealing locks](//todo)
-    * [Lock Communication](//todo)
-  * [Внешние зависимости](//todo)
-  * [Стержневые и оперативные правки](//todo)
-* [Ветвление и слияние](//todo)
+
+### Об этой книге
+
+* [Об этой книге](00-prefase/preface.md)
+* [Для кого написана эта книга?](00-prefase/audience.md)
+* [Как читать эту книгу?](00-prefase/howread.md)
+* [Соглашения, принятые в книге](00-prefase/conventions.md)
+* [Структура книги](00-prefase/organisation.md)
+* [Эта книга распространяется свободно](00-prefase/free.md)
+* [Благодарности](00-prefase/acks.md)
+* [Что такое Subversion?](00-prefase/intro-whatis.md)
+
+### Основные понятия
+
+* [Основные понятия](01-basic/basic.md)
+* [Хранилище](01-basic/repository.md)
+* [Модели версионирования](01-basic/vsn-models.md)
+* [Subversion в действии](01-basic/in-action.md)
+* [Подводя итоги](01-basic/summary.md)
+
+### II. Экскурсия по Subversion
+
+* [Экскурсия по Subversion](02-tour/tour.md)
+* [Читайте справку!](02-tour/help.md)
+* [Импорт](02-tour/import.md)
+* [Путешествие во времени вместе с Subversion](02-tour/revs.md)
+* [Создание рабочей копии](02-tour/initial.md)
+* [Простейший рабочий цикл](02-tour/cycle.md)
+* [Анализ истории](02-tour/history.md)
+* [Другие полезные команды](02-tour/other.md)
+* [Подводя итоги](02-tour/summary.md)
+
+### III. Профессиональное использование Subversion
+
+* [Профессиональное использование Subversion](03-advanced/advanced.md)
+* [Способы обозначения правок](03-advanced/revs-specifiers.md)
+* [Свойства](03-advanced/props.md)
+* [Переносимость файлов](03-advanced/props-file-portability.md)
+* [Пропуск неверсионированных элементов](03-advanced/props-special-ignore.md)
+* [Подстановка ключевых слов](03-advanced/props-special-keywords.md)
+* [Locking](//todo)
+  * [Creating locks](//todo)
+  * [Discovering locks](//todo)
+  * [Breaking and stealing locks](//todo)
+  * [Lock Communication](//todo)
+* [Внешние зависимости](//todo)
+* [Стержневые и оперативные правки](//todo)
+
+* [IV. Ветвление и слияние](//todo)
   * [Что такое ветка?](//todo)
   * [Использование веток](//todo)
     * [Создание ветки](//todo)
@@ -68,7 +81,8 @@
     * [General Vendor Branch Management Procedure](//todo)
     * [svn_load_dirs.pl](//todo)
   * [Подводя итоги](//todo)
-* [Администрирование хранилища](//todo)
+
+* [V. Администрирование хранилища](//todo)
   * [Repository Basics](//todo)
     * [Understanding Transactions and Revisions](//todo)
     * [Unversioned Properties](//todo)
@@ -93,7 +107,8 @@
     * [Choosing a Repository Layout](//todo)
     * [Creating the Layout, and Importing Initial Data](//todo)
   * [Summary](//todo)
-* [Настройка сервера](//todo)
+
+* [VI. Настройка сервера](//todo)
   * [Обзор](//todo)
     * [Http-сервер Apache](//todo)
     * [Сервер svnserve](//todo)
@@ -126,7 +141,8 @@
     * [Other Features](//todo)
   * [Path-Based Authorization](//todo)
   * [Supporting Multiple Repository Access Methods](//todo)
-* [Профессиональная настройка Subversion](//todo)
+
+* [VII. Профессиональная настройка Subversion](//todo)
   * [Параметры времени выполнения](//todo)
     * [Структура области конфигурации](//todo)
     * [Конфигурация и реестр Windows](//todo)
@@ -139,7 +155,8 @@
   * [Using External Differencing Tools](//todo)
     * [External diff](//todo)
     * [External diff3](//todo)
-* [Информация для разработчиков](//todo)
+
+* [VIII. Информация для разработчиков](//todo)
   * [Layered Library Design](//todo)
     * [Repository Layer](//todo)
     * [Repository Access Layer](//todo)
@@ -156,7 +173,8 @@
     * [The Entries File](//todo)
     * [Pristine Copies and Property Files](//todo)
   * [WebDAV](//todo)
-* [9. Полное справочное руководство по Subversion](//todo)
+
+* [IX. Полное справочное руководство по Subversion](//todo)
   * [Клиент командной строки Subversion: svn](//todo)
     * [Параметры командной строкиsvn](//todo)
     * [Подкоманды svn](//todo)
@@ -235,9 +253,11 @@
     * [mod_dav_svn Configuration Directives](//todo)
   * [Свойства Subversion](//todo)
     * [Свойства Subversion](//todo)
+
 * [A. Быстрый старт в Subversion](//todo)
   * [Установка Subversion](//todo)
   * [Быстрый старт в Subversion](//todo)
+
 * [B. Subversion для пользователей CVS](//todo)
   * [Revision Numbers Are Different Now](//todo)
   * [Directory Versions](//todo)
@@ -252,6 +272,7 @@
   * [Versioned Modules](//todo)
   * [Authentication](//todo)
   * [Converting a Repository from CVS to Subversion](//todo)
+
 * [C. WebDAV и автоматическое управление версиями](//todo)
   * [Basic WebDAV Concepts](//todo)
     * [Original WebDAV](//todo)
@@ -269,7 +290,11 @@
       * [WebDrive, NetDrive](//todo)
       * [Mac OS X](//todo)
       * [Linux davfs2](//todo)
+
 * [D. Инструменты от сторонних разработчиков](//todo)
+
 * [E. Copyright](//todo)
+
 * [Предметный указатель](//todo)
+
 * [Русский глоссарий](//todo)

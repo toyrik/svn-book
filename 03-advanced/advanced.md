@@ -14,8 +14,8 @@
   * Тип содержимого файла
   * Исполнимость файла
   * Символы конца строки
-* [Пропуск неверсионированных элементов](//todo)
-* [Подстановка ключевых слов](//todo)
+* [Пропуск неверсионированных элементов](advanced-props-special-ignore.md)
+* [Подстановка ключевых слов](advanced-props-special-keywords.md)
 * [Locking](//todo)
   * Creating locks
   * Discovering locks
